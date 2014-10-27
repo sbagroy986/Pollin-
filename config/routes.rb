@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :polls
+  get '/polls/:id/upvotes' => 'polls#increase',:as => :increase_polls
+  get '/polls/:id/downvotes' => 'polls#decrease', :as => :decrease_polls
+    
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

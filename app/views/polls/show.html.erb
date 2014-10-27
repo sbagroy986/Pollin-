@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Issue:</strong>
+  <%= @poll.issue %>
+</p>
+
+<p>
+  <strong>Dtime:</strong>
+  <%= @poll.dtime %>
+</p>
+
+<p>
+  <strong>Upvotes:</strong>
+  <%= @poll.upvotes %>
+</p>
+
+<p>
+  <strong>Downvotes:</strong>
+  <%= @poll.downvotes %>
+</p>
+
+<%= link_to 'Edit', edit_poll_path(@poll) %> |
+<%= link_to 'Back', polls_path %>

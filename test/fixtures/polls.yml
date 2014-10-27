@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  issue: MyString
+  dtime: MyString
+  upvotes: 1
+  downvotes: 1
+
+two:
+  issue: MyString
+  dtime: MyString
+  upvotes: 1
+  downvotes: 1
