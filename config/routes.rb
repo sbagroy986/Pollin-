@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :polls
+  root 'polls#index'
   get '/polls/:id/upvotes' => 'polls#increase',:as => :increase_polls
   get '/polls/:id/downvotes' => 'polls#decrease', :as => :decrease_polls
     

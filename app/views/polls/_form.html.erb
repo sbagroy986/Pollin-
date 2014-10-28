@@ -10,23 +10,16 @@
       </ul>
     </div>
   <% end %>
-
+<div style= "text-align:center">
   <div class="field">
-    <%= f.label :issue %><br>
-    <%= f.text_field :issue %>
-  </div>
-  <div class="field">
-    <%= @time %>
-  </div>
-  <div class="field">
-    <%= f.label :upvotes %><br>
-    <%= f.number_field :upvotes %>
-  </div>
-  <div class="field">
-    <%= f.label :downvotes %><br>
-    <%= f.number_field :downvotes %>
+<br>
+    <p style="font-size:50px;padding-bottom:30px;">Topic of the Poll</p>
+    <%= f.text_field :issue %><br>
   </div>
   <div class="actions">
+  </div>
+  <div style ="padding-top:10px;padding-right:5px;">
     <%= f.submit %>
+  </div>
   </div>
 <% end %>

@@ -3,30 +3,36 @@
 <table>
   <thead>
     <tr>
-      <th>Issue</th>
-      <th>Dtime</th>
-      <th>Upvotes</th>
-      <th>Downvotes</th>
-      <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
+    <div id="headerwrap">
+      <div class="container">
+      <div class="row">
+        <div class="col-lg-7 col-lg-offset-2">
+          <h1>Check out all the polls here.</h1>
+          <h5>And vote on some, if you like.</h5>      
+        </div>
+      </div><!-- /row -->
+      </div> <!-- /container -->
+  </div><!-- /headerwrap -->
     <% @polls.each do |poll| %>
       <tr>
-        <td><%= poll.issue %></td>
-        <td><%= poll.dtime %></td>
-        <td><%= poll.upvotes %>
-
-          <%= link_to "Upvote", increase_polls_path(:id => poll.id) %>
-        </td>
-        <td><%= poll.downvotes %>
-         <%= link_to "Downvote", decrease_polls_path(:id => poll.id) %></td>
-
-         <%= pie_chart({"Upvotes"=>poll.upvotes,"Downvotes"=> poll.downvotes}) %>
-        <td><%= link_to 'Show', poll %></td>
-        <td><%= link_to 'Edit', edit_poll_path(poll) %></td>
-        <td><%= link_to 'Destroy', poll, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    
+      
+      <div style="text-align:center;">
+        <p style="padding-top:30px;font-size:60px;"><%= poll.issue %></p>
+        <p style="font-size:9px;">-<%= poll.dtime %></p>
+      </div>
+        <p><%= pie_chart({"For" => poll.upvotes, "Against" => poll.downvotes}) %></p>
+          <div style ="text-align:center;">
+          <%= link_to "Upvote ", increase_polls_path(:id => poll.id) %> 
+        
+         <%= link_to "Downvote", decrease_polls_path(:id => poll.id) %>
+      </div>
+         
+        <p style="float:right;"><%= link_to 'Delete', poll, method: :delete, data: { confirm: 'Are you sure?' } %> </p>
       </tr>
 
 
@@ -37,4 +43,4 @@
 
 <br>
 
-<%= link_to 'New Poll', new_poll_path %>
+
