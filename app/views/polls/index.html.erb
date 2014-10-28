@@ -17,14 +17,20 @@
         <td><%= poll.issue %></td>
         <td><%= poll.dtime %></td>
         <td><%= poll.upvotes %>
+
           <%= link_to "Upvote", increase_polls_path(:id => poll.id) %>
         </td>
         <td><%= poll.downvotes %>
-         <%= link_to "Downvote", decrease_polls_path(:id => poll.id) %>
+         <%= link_to "Downvote", decrease_polls_path(:id => poll.id) %></td>
+
+         <%= pie_chart({"Upvotes"=>poll.upvotes,"Downvotes"=> poll.downvotes}) %>
         <td><%= link_to 'Show', poll %></td>
         <td><%= link_to 'Edit', edit_poll_path(poll) %></td>
         <td><%= link_to 'Destroy', poll, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+
+
+
     <% end %>
   </tbody>
 </table>
