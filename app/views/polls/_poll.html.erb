@@ -1,0 +1,6 @@
+<p><%= pie_chart({"For" => poll.upvotes, "Against" => poll.downvotes}) %></p>
+          <div style ="text-align:center;">
+          <%= link_to "Upvote ", increase_polls_path(:id => poll.id), :remote => true %> 
+        
+         <%= link_to "Downvote", decrease_polls_path(:id => poll.id), :remote => true %>
+      </div>

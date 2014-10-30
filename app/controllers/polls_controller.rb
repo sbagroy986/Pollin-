@@ -7,13 +7,17 @@ class PollsController < ApplicationController
     @ti= Poll.find(params[:id])
     @ti.upvotes+=1
     @ti.save
-    redirect_to polls_path
+    respond_to do |format|
+    format.js
+  end
   end
   def decrease
    @ti= Poll.find(params[:id])
     @ti.downvotes+=1
     @ti.save
-    redirect_to polls_path
+    respond_to do |format|
+    format.js
+  end
   end
 
   def index

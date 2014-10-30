@@ -25,11 +25,8 @@
         <p style="padding-top:30px;font-size:60px;"><%= poll.issue %></p>
         <p style="font-size:9px;">-<%= poll.dtime %></p>
       </div>
-        <p><%= pie_chart({"For" => poll.upvotes, "Against" => poll.downvotes}) %></p>
-          <div style ="text-align:center;">
-          <%= link_to "Upvote ", increase_polls_path(:id => poll.id) %> 
-        
-         <%= link_to "Downvote", decrease_polls_path(:id => poll.id) %>
+      <div class = "jrender">
+        <%= render(poll) %>
       </div>
          
         <p style="float:right;"><%= link_to 'Delete', poll, method: :delete, data: { confirm: 'Are you sure?' } %> </p>

@@ -1,0 +1,1 @@
+ $("#jrender").html("<%= escape_javascript(render partial: '_poll' ) %>")
