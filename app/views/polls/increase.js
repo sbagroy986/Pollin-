@@ -1,1 +1,2 @@
- $("#jrender").html("<%= escape_javascript(render partial: '_poll' ) %>")
+ $("#poll_<%=@ti.id%>").html("<%= render(partial: 'polls/poll', locals: {poll: @ti}).gsub('\"','\'').gsub('\
+ ','')  %>")

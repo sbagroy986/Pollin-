@@ -25,7 +25,7 @@
         <p style="padding-top:30px;font-size:60px;"><%= poll.issue %></p>
         <p style="font-size:9px;">-<%= poll.dtime %></p>
       </div>
-      <div class = "jrender">
+      <div class = "jrender" id="poll_<%=poll.id%>">
         <%= render(poll) %>
       </div>
          

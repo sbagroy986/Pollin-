@@ -1,1 +1,1 @@
- $("#jrender").html("<%= escape_javascript(render partial: '_poll' ) %>")
+ $("#poll_<%=@ti.id%>").html("<%= escape_javascript(render partial: 'polls/poll', locals: {poll: @ti} ) %>")
