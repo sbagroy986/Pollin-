@@ -1,5 +1,4 @@
-<h1>Listing polls</h1>
-
+<h1 style = "padding-top:40px;"> </h1>
 <table>
   <thead>
     <tr>
@@ -11,9 +10,11 @@
       <div class="container">
       <div class="row">
         <div class="col-lg-7 col-lg-offset-2">
-          <h1>Check out all the polls here.</h1>
-          <h5>And vote on some, if you like.</h5>      
-        </div>
+          <div style="font-align:center">
+            <h1>Check out all the polls here.</h1>
+            <h5>And vote on some, if you like.</h5>      
+          </div>
+      </div>
       </div><!-- /row -->
       </div> <!-- /container -->
   </div><!-- /headerwrap -->
@@ -31,9 +32,19 @@
          
         <p style="float:right;"><%= link_to 'Delete', poll, method: :delete, data: { confirm: 'Are you sure?' } %> </p>
       </tr>
+      <div class="container">
+      <div class="row centered">
+        <div class ="col-md-6">
+          <div style ="border-bottom: 5px solid blue;
+            margin-bottom: 25px;padding-top:50px;padding-botton:1000px;"></div>
+          </div>
+          <div class = "col-md-6">
 
-
-
+            <div style ="border-bottom: 5px solid orange;
+            margin-bottom: 25px;padding-top:50px;padding-botton:1000px;">
+        </div>
+      </div>
+    </div>
     <% end %>
   </tbody>
 </table>
