@@ -9,12 +9,12 @@ if user and user.authenticate(params[:password])
 session[:user_id] = user.id
 redirect_to polls_path
 else
-redirect_to new_users_path, alert: "Invalid user/password combination"
+redirect_to new_user_path, alert: "Invalid user/password combination"
 end
 end
 
   def destroy
   	session[:user_id] = nil
- 	redirect_to new_users_path, notice: "Logged out"
+ 	redirect_to new_user_path
   end
 end

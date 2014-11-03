@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   skip_before_action :authorize
-  layout "blank"
   # GET /users
   # GET /users.json
   def index
@@ -31,7 +30,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         session[:user_id] = @user.id
-        format.html { redirect_to t1_test_path, notice: 'Account successfully created!' }
+        format.html { redirect_to polls_path, notice: 'Account successfully created!' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }

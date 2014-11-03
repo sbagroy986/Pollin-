@@ -43,58 +43,5 @@
       </ul>
     </div>
   <% end %>
-      <h2>Please Sign Up <small>It's free and always will be.</small></h2>
-      <hr class="colorgraph">
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-6">
-          <div class="form-group">
-                      <%= f.text_field :name, :class => "form-control input-lg" %>
-          </div>
-        </div>
-      </div>
-  
-      <div class="form-group">
-        <%= f.text_field :email, :class => "form-control input-lg" %>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-6">
-          <div class="form-group">
-            <%= f.password_field :password, :class => "form-control input-lg" %>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-6">
-          <div class="form-group">
-              <%= f.password_field :password_confirmation, :class => "form-control input-lg" %>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        
-      </div>
-      
-      <hr class="colorgraph">
-      <div class="row">
-        <div class="col-xs-12 col-md-6" style="padding-bottom:100px;"><input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
-        <% end %>
-       
-      </div>
-    </form>
-  </div>
-</div>
-<!-- Modal -->
-<div class="modal fade" id="t_and_c_m" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-</div>
-     
-      </div>
-         
-        <p style="float:right;"></p>
-      </tr>
+     <%= render'form' %>
 
