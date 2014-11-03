@@ -11,13 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141025184151) do
+ActiveRecord::Schema.define(version: 20141101211144) do
 
   create_table "polls", force: true do |t|
     t.string   "issue"
     t.string   "dtime"
     t.integer  "upvotes"
     t.integer  "downvotes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "password_digest"
+    t.integer  "report"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

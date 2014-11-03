@@ -1,0 +1,100 @@
+<h1 style = "padding-top:40px;"> </h1>
+<table>
+  <thead>
+    <tr>
+    </tr>
+  </thead>
+
+  <tbody>
+    <div id="headerwrap">
+      <div class="container">
+      <div class="row">
+        <div class="col-lg-7 col-lg-offset-2" style="height:400px;">
+          <div >
+            <h1 style="font-size:70px;font-align:center">Welcome to Pollin'</h1>
+            <h3 style="font-size:20px;">Create an account today to start!</h3>
+                
+          </div>
+      </div>
+      </div><!-- /row -->
+      </div> <!-- /container -->
+
+    <tr>
+    
+      
+      <div style="text-align:center;">
+        <p style="padding-top:30px;font-size:60px;"></p>
+        <p style="font-size:9px;"></p>
+      </div>
+<div class="container">
+
+<div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+    <form role="form">
+      <%= form_for(@pser) do |f| %>
+      <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pser.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @pser.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+      <h2>Please Sign Up <small>It's free and always will be.</small></h2>
+      <hr class="colorgraph">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="form-group">
+                      <%= f.text_field :name, :class => "form-control input-lg" %>
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <%= f.text_field :email, :class => "form-control input-lg" %>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="form-group">
+            <%= f.password_field :password, :class => "form-control input-lg" %>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="form-group">
+              <%= f.password_field :password_confirmation, :class => "form-control input-lg" %>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        
+      </div>
+      
+      <hr class="colorgraph">
+      <div class="row">
+        <div class="col-xs-12 col-md-6" style="padding-bottom:100px;"><input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+        <% end %>
+       
+      </div>
+    </form>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="t_and_c_m" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</div>
+     
+      </div>
+         
+        <p style="float:right;"></p>
+      </tr>
+

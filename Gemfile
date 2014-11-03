@@ -1,8 +1,12 @@
 source 'http://rubygems.org'
 
-
+gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.5'
+group :development do
+	gem 'sqlite3'
+end
+
 # Use sqlite3 as the database for Active Record
 group :production do
   gem 'pg',             '0.17.1'
@@ -31,7 +35,7 @@ gem 'spring',        group: :development
 gem 'chartkick'
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+ gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
 # gem 'unicorn'

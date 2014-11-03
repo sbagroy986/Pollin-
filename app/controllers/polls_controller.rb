@@ -21,7 +21,7 @@ class PollsController < ApplicationController
   end
 
   def index
-    @polls = Poll.all
+    @polls = Poll.order(:issue)
   end
 
   # GET /polls/1

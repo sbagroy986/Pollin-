@@ -1,9 +1,25 @@
 Rails.application.routes.draw do
+  get 'test/t1'
+
+  get 'sessions/new'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+  get 'test/t1' => 'test#t1', :as => :t1_test
+
+  resources :users
+
   resources :polls
   root 'polls#index'
   get '/polls/:id/upvotes' => 'polls#increase',:as => :increase_polls
   get '/polls/:id/downvotes' => 'polls#decrease', :as => :decrease_polls
-    
+
+controller :sessions do
+get 'login' => :new
+post 'login' => :create
+delete 'logout' => :destroy
+end    
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
