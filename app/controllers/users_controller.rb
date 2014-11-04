@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   skip_before_action :authorize
+  layout "blank"
   # GET /users
   # GET /users.json
   def index
@@ -16,8 +17,17 @@ class UsersController < ApplicationController
   # GET /users/new
   def new
     @user = User.new
+    
   end
-
+ def create
+    user = User.find_by(name: params[:name])
+if user and user.authenticate(params[:password])
+session[:user_id] = user.id
+redirect_to polls_path
+else
+redirect_to new_user_path, alert: "Invalid user/password combination"
+end
+end
   # GET /users/1/edit
   def edit
   end

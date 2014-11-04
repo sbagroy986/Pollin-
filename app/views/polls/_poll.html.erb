@@ -1,4 +1,4 @@
-<p><%= pie_chart({"For" => poll.upvotes, "Against" => poll.downvotes}) %></p>
+<p style="padding-left:400px"><%= image_tag(Gchart.pie(:legend => ['Upvotes','Downvotes'], :data => [poll.upvotes,poll.downvotes], :size => '400x200')) %></p>
           <div style ="text-align:center;">
           <%= link_to "Upvote ", increase_polls_path(:id => poll.id), :remote => true %> 
         
